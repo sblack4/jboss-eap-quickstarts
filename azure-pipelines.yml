@@ -31,12 +31,12 @@ steps:
   displayName: Login to ACR
   inputs:
     command: login
-    containerRegistry: rhythmic-test-docker-registry-endpoint
+    containerRegistry: acr-endpoint
 
 - task: Docker@2
   displayName: Build and Push
   inputs:
     command: buildAndPush
-    repository: jboss-hello-world
+    repository: acr-registry
     tags: |
       latest
