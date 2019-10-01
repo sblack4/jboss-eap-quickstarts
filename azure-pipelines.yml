@@ -31,7 +31,7 @@ steps:
   displayName: Login to ACR
   inputs:
     command: login
-    containerRegistry: $(acr-endpoint)
+    containerRegistry: ACR
 
 - task: Docker@2
   displayName: Build and Push
