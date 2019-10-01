@@ -24,7 +24,7 @@ steps:
 
 - task: PublishPipelineArtifact@1
   inputs:
-    path: helloworld/target/jboss-as-helloworld.war
+    path: helloworld/target/helloworld.war
     artifact: HelloWorld.war
 
 - task: Docker@2
