@@ -31,12 +31,12 @@ steps:
   displayName: Login to ACR
   inputs:
     command: login
-    containerRegistry: acr-endpoint
+    containerRegistry: $(acr-endpoint)
 
 - task: Docker@2
   displayName: Build and Push
   inputs:
     command: buildAndPush
-    repository: acr-registry
+    repository: $(acr-registry)
     tags: |
       latest
